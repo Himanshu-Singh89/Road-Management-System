@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🚧 Road Management System</h1>
+        <p>Manage roads, report problems and track repairs</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#report">Report Issue</a>
+        <a href="#complaints">Complaints</a>
+    </nav>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Complaints</h3>
+                    <p id="total">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pending Issues</h3>
+                    <p id="pending">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Resolved Issues</h3>
+                    <p id="resolved">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Issue -->
+        <section id="report">
+            <h2>Report Road Problem</h2>
+
+            <form id="roadForm">
+
+                <label>Road Name:</label>
+                <input type="text" id="roadName"
+                       placeholder="Enter road name" required>
+
+                <label>Location:</label>
+                <input type="text" id="location"
+                       placeholder="Enter location" required>
+
+                <label>Problem Type:</label>
+                <select id="problem" required>
+                    <option value="">Select Problem</option>
+                    <option value="Pothole">Pothole</option>
+                    <option value="Broken Road">Broken Road</option>
+                    <option value="Water Logging">Water Logging</option>
+                    <option value="Street Light">Street Light</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Priority:</label>
+                <select id="priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit">Submit Complaint</button>
+
+            </form>
+        </section>
+
+        <!-- Complaints -->
+        <section id="complaints">
+            <h2>Road Complaints</h2>
+
+            <input type="text" id="search"
+                   placeholder="Search by road or location...">
+
+            <select id="filter">
+                <option value="All">All Complaints</option>
+                <option value="Pending">Pending</option>
+                <option value="Resolved">Resolved</option>
+            </select>
+
+            <div id="complaintList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Road Management System | Student Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
